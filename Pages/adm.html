@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adm</title>
+    <link rel="stylesheet" href="/Styles/styleMenu.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="../Img/Icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Styles/stylesAdm.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../index.html"><img class="logo" src="../Img/Icons/Logo.png" alt="Logo do site"></a>
+        </div>
+        <nav>
+            <div class="menuHamburgue" onclick="mobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="Presets.html">Presets</a></li>
+                    <li><a href="../index.html#p4">Loja</a></li>
+                    <li><a href="../index.html#p5">Contato</a></li>
+                    <li><a href="/Pages/login.html"><img class="logoicon" src="../Img/Icons/Icon_user.png"
+                                alt="Icone_user"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="mobile-links" style="display: none;">
+        <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="Presets.html">Presets</a></li>
+            <li><a href="../index.html#p4">Loja</a></li>
+            <li><a href="../index.html#p5">Contato</a></li>
+            <li><a href="/Pages/login.html">Minha Conta</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="conteiner">
+            <section class="card">
+                <nav class="headerConteiner">
+                    <ul>
+                        <li><a href="#" onclick="mostrarConteudo('portfolio')">Portfolio</a></li>
+                        <li><a href="#" onclick="mostrarConteudo('produtos')">Produtos</a></li>
+                        <li><a href="#" onclick="mostrarConteudo('transicoes')">Transições</a></li>
+                    </ul>
+                </nav>
+
+                <div class="conteudo cardConteiner" id="portfolio">
+                    <div class="cardForm">
+                        <form action="#" method="post" enctype="multipart/form-data" class="cardAdd">
+                            <div class="inputImage">
+                                <div class="inputImageCont">
+                                    <label for="arquivos" class="custom-file-input">
+                                        <input type="file" id="arquivos" accept="image/png, image/jpeg" multiple
+                                            style="display: none;">
+                                        <img src="../Img/Icons/icon_Image.png" alt="Ícone de upload" id="icone-preview">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="inputNome">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome">
+                            </div>
+                            <div class="inputData">
+                                <label for="data">Data</label>
+                                <input type="date" name="data" id="data">
+                            </div>
+                            <div class="inputSub">
+                                <input type="submit" value="+">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="cardForm">
+                        <div class="conf">
+                            <div class="imgConf">
+                                <img src="../Img/Portfolio/DSC04872.jpg" alt="imagem portfolio">
+                            </div>
+                            <div class="nomeConf">
+                                <h1>Nome</h1>
+                                <p>Guilherme</p>
+                            </div>
+                            <div class="dataConfi">
+                                <h1>Data</h1>
+                                <p>12/09/2023</p>
+                            </div>
+                            <div class="eventoConf">
+                                <a><span class="material-symbols-outlined">edit</span></a>
+                                <a><span class="material-symbols-outlined">delete</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="cardConteiner" id="produtos" style="display: none;">
+            <div class="cardForm">
+                <form action="#" method="post" enctype="multipart/form-data" class="cardAdd">
+                    <div class="inputImageP">
+                        <div class="inputImageCont">
+                            <label for="arquivos" class="custom-file-input">
+                                <input type="file" id="arquivos" accept="image/png, image/jpeg" multiple
+                                    style="display: none;">
+                                <img src="../Img/Icons/icon_Image.png" alt="Ícone de upload" id="icone-preview">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inputNomeP">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="inputPreco">
+                        <label for="preco">Preço</label>
+                        <input type="text" name="preco" id="preco">
+                    </div>
+                    <div class="inputDesconto">
+                        <label for="desconto">Desconto</label>
+                        <div class="descontoLinha">
+                            <input type="checkbox" name="desconto" id="desconto">
+                            <input type="text" name="descontoP" id="descontoP">
+                        </div>
+                    </div>
+                    <div class="inputSubP">
+                        <input type="submit" value="+">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cardConteiner" id="transicoes" style="display: none;">
+            <div class="cardForm">
+                <form action="#" method="post" enctype="multipart/form-data" class="cardAdd">
+                    <div class="inputImage">
+                        <div class="inputImageCont">
+                            <label for="arquivos" class="custom-file-input">
+                                <input type="file" id="arquivos" accept="image/png, image/jpeg" multiple
+                                    style="display: none;">
+                                <img src="../Img/Icons/icon_Image.png" alt="Ícone de upload" id="icone-preview">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inputNome">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="inputData">
+                        <label for="data">Data</label>
+                        <input type="date" name="data" id="data">
+                    </div>
+                    <div class="inputSub">
+                        <input type="submit" value="+">
+                    </div>
+                </form>
+            </div>
+        </div>
+        </section>
+        </div>
+    </main>
+    <script src="../Scripts/scriptAdm.js"></script>
+</body>
+
+</html>

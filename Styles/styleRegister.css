@@ -1,0 +1,237 @@
+@font-face {
+    font-family: MyriadPro-Light;
+    src: url('../Font/MyriadPro-Light.otf');
+}
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+@font-face {
+    font-family: MyriadPro-BoldCond;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000d0;
+    align-items: center;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: MyriadPro-Regular;
+}
+
+nav li {
+    color: white;
+    margin: 0px 20px;
+}
+
+.logo {
+    width: 10em;
+}
+
+.logoicon {
+    width: 2em;
+}
+
+
+/*------------------------------------------------------*/
+
+.paralax{
+    height: 100vh;
+    width: 100%;
+    user-select: none;
+    background-image: url(../Img/Login/DSC01293-Completo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*---------------------------------------------------------*/
+
+.conteinerL{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 67%;
+}
+
+.dir img{
+    width: 100%;
+    height: 100%;
+}
+
+.esq{
+    width:60% ;
+    height: 100%;  
+    background-color: #ffffff;
+    padding: 0em 2em;
+}
+.introducao h1{
+    font-family: MyriadPro-BoldCond;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.introducao{
+    height: 15%;
+}
+.introducao > p > a{
+    margin-left: 1em;
+    text-decoration: none;
+    color: #1f1f1f;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.esq .formulario{
+    height:85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.formulario label{
+    width: 75%;
+}
+.formulario input[type="email"],[type="password"],[type="text"] {
+    width: 80%;
+    height: 1em;
+    border-radius: 5px;
+    border: 1px solid #C7C7C7;
+    padding: 1.1em;
+}
+.senhaConteiner{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #C7C7C7;
+    border-radius: 5px;
+}
+.senhaConteiner > input{
+    border: none;
+    width: 100%;
+}
+.senhaConteiner > span{
+    left: 53%;
+    color: #C7C7C7C7;
+    position: absolute;
+    cursor: pointer;
+}
+.formulario input[type="submit"] {
+    display: block;
+    width: 13em;
+    height: 3em;
+    border: none;
+    color: #ffffff;
+    background-color: #3791C3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.formulario input[type="submit"]:active {
+    background-color: #266b91;
+}
+p{
+    margin-top: 5px;
+    width: 75%;
+}
+
+@media screen and (max-width: 750px){
+    .paralax{
+        background-image: none;
+        background-color: #EEEEEE;
+    }
+    .dir{
+        display: none;
+    }
+    .conteinerL{
+        width: 90%;
+        height: 90%;
+    }
+    .esq{
+        height: 85%;  
+        width:100% ;
+        background-color: #ffffff;
+        padding: 2em;
+        box-shadow: 2px 4px 4px #00000021;
+        border-radius: 5px;
+    }
+    .introducao{
+        height: 20%;
+    }
+    .introducao > p{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .introducao > p > a{
+        font-size: 1.2em;
+    }
+    .esq .formulario{
+        height: 100vh;
+        display: flex;
+        justify-content: start;
+    }
+    .formulario label{
+        width: 95%;
+        margin-bottom: 1em;
+    }
+    .formulario input[type="email"],[type="password"],[type="text"] {
+        width: 100%;
+    }
+    .formulario a {
+        width: 100%;
+        margin-bottom: 1.5em;
+        color: #757575;
+        font-weight: 500;
+    }
+    .formulario input[type="submit"] {
+        margin: 0em auto;
+        width: 15em;
+        height: 3.5em;
+    }
+    p{
+        margin-top: 5px;
+        width: 80%;
+    }
+    .senhaConteiner{
+        width: 100%;
+    }
+    .senhaConteiner > input{
+        width: 100%;
+    }
+    .senhaConteiner > span{
+        left: 80%;
+    }
+}

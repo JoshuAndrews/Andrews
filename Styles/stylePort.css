@@ -1,0 +1,76 @@
+@font-face {
+    font-family: MyriadPro-Light;
+    src: url('../Font/MyriadPro-Light.otf');
+}
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+@font-face {
+    font-family: MyriadPro-BoldCond;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+.p1 {
+    margin-top: 5em;
+}
+
+.p1 h1 {
+    margin-bottom: 3em;
+    text-align: center;
+    font-family:  Helvetica;
+}
+
+.conteiner-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2.5em;
+}
+
+.portfolio-card-imagem {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    flex-basis: calc(33.33% - 50px);
+}
+
+.portfolio-card-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.219);
+}
+
+.portfolio-card-imagem img:hover {
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgb(192, 192, 192);
+    transform: scale(1.02);
+    transition: ease-in all 0.3s;
+}
+
+@media screen and (max-width: 750px) {
+    body{
+        user-zoom: fixed;
+    }
+    .portifolio-card-imagem {
+        flex-basis: calc(55.55% - 50px);
+        margin: 1em 0.5em;
+    }
+    .portfolio-card-imagem img {
+        max-width: 45vw;
+    }
+    .p1 h1 {
+        margin-bottom: 1em;
+    }
+}

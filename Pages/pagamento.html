@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela De Pagamento</title>
+    <link rel="shortcut icon" href="../Img/Icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/styleMenu.css">
+    <link rel="stylesheet" href="../Styles/stylePagamento.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="../index.html"><img class="logo" src="../Img/Icons/Logo.png" alt="Logo do site"></a>
+        </div>
+        <nav>
+            <div class="menuHamburgue" onclick="mobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./Presets.html">Presets</a></li>
+                    <li><a href="../index.html#p4">Loja</a></li>
+                    <li><a href="../index.html#p5">Contato</a></li>
+                    <li><a href="/Pages/login.html"><img class="logoicon" src="../Img/Icons/Icon_user.png" alt="Icone_user"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="mobile-links" style="display: none;">
+        <ul>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./Presets.html">Presets</a></li>
+            <li><a href="../index.html#p4">Loja</a></li>
+            <li><a href="../index.html#p5">Contato</a></li>
+            <li><a href="/Pages/login.html">Minha Conta</a></li>
+        </ul>
+    </div>
+<main>
+    <div class="cotainerP">
+        <div class="ladoInfoProduto">
+            <div class="produto" id="planoEssencial" style="display: none;">
+                <div class="prod1">
+                    <h1>Plano Essencial</h1>
+                    <p>Capturando a Essência da Sua História</p>
+                </div>
+                <div class="prod2">
+                    <h2>Inclui:</h2>
+                    <h3>10 Fotos;</h3>
+                </div>
+                <div class="prod3">
+                    <p>por</p>
+                    <h2>R$ 110,00</h2>
+                </div>
+            </div>
+
+            <div class="produto" id="planoPremium" style="display: none;">
+                <div class="prod1">
+                    <h1>Plano Premimum</h1>
+                    <p>Transformando Seus Sonhos em Imagens</p>
+                </div>
+                <div class="prod2">
+                    <h2>Inclui:</h2>
+                    <h3>15 Fotos Inclusas;</h3>
+                    <h3>+3 Fotos GRATIS</h3>
+                </div>
+                <div class="prod3">
+                    <p>por</p>
+                    <h2>R$ 180,00</h2>
+                </div>
+            </div>
+
+            <div class="produto" id="planoDeluxe" style="display: none;">
+                <div class="prod1">
+                    <h1>Plano Delux</h1>
+                    <p>Elegância Capturada em Cada Imagem</p>
+                </div>
+                <div class="prod2">
+                    <h2>Inclui:</h2>
+                    <h3>20 Fotos Inclusas;</h3>
+                    <h3>Foto impressas;</h3>
+                    <h3>+5 Fotos GRATIS</h3>
+                </div>
+                <div class="prod3">
+                    <p>por</p>
+                    <h2>R$ 230,00</h2>
+                </div>
+            </div>
+        </div>
+        <div class="ladoPagamento">
+            <h1>Tela de Pagamento</h1>
+
+            <div class="modoPagamento">
+                <div class="box">
+                    <input type="radio" name="modoPagamento" id="pagamentoCartao" checked>
+                    <label for="pagamentoCartao">Cartão de credito</label>
+                </div>
+                <div class="box">
+                    <input type="radio" name="modoPagamento" id="pagamentoPix">
+                    <label for="pagamentoPix">Pagameto via Pix</label>
+                </div>
+            </div>
+
+            <form action="#" method="post" class="formulario" id="formPix" style="display: none;">
+                <label for="nomeUsuario">Nome de Usuario: </label>
+                <input type="text" name="nomeUsuario">
+                <div class="qrCode">
+                    <img src="../Img/Planos/qrCodePix.png" alt="qrCodePix">
+                </div>
+                <input type="submit" value="Continuar">
+            </form>
+
+            <form action="#" method="post" class="formulario" id="formCartao">
+                <label for="numeroDeCartao">Número de Cartão</label>
+                <input type="text" name="numeroDeCartao" id="numeroDeCartao" maxlength="19">
+                <p id="erroCartao" class="error" ></p></br>
+        
+                <label for="nomeUsuario">Nome Completo: </label>
+                <input type="text" name="nomeUsuario" id="nomeUsuario"></br>
+                <div class="linha">
+                    <div class="caixa">
+                        <label for="dataDeVencimento">Data de Vencimento</label>
+                        <input type="text" name="dataDeVencimento" id="dataDeVencimento">
+                        <p id="erroDataVencimento" class="error" ></p>
+                    </div>
+                    <div class="caixa">
+                        <label for="codigoDeSeguranca">Código de Segurança</label>
+                        <input type="text" name="codigoDeSeguranca" id="codigoDeSeguranca" maxlength="3">
+                        <p id="erroCVV" class="error" ></p>
+                    </div>
+                </div>
+                <label for="cpf">CPF do titular do Cartão</label>
+                <input type="text" name="cpf" id="cpf"> 
+                <p id="erroCPF" class="error"></p></br>
+                <input type="submit" value="Continuar">
+            </form>
+        </div>
+    </div>
+</main>
+<script>
+    document.documentElement.style.zoom = "1.0";
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash === "#planoEssencial") {
+            const planoEssencial = document.getElementById("planoEssencial");
+            planoEssencial.style.display = "block";
+        } else if (window.location.hash === "#planoPremium") {
+            const planoPremium = document.getElementById("planoPremium");
+            planoPremium.style.display = "block";
+        } else if (window.location.hash === "#planoDeluxe") {
+            const planoDeluxe = document.getElementById("planoDeluxe");
+            planoDeluxe.style.display = "block";
+        }
+    });
+</script>
+    <script src="../Scripts/scriptPagamento.js"></script>
+    <script src="../Scripts/scriptMenu.js"></script>
+</body>
+
+</html>

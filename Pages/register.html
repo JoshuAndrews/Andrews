@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="shortcut icon" href="./Img/Icons/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../Styles/styleRegister.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="/Styles/styleMenu.css">
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <a href="../index.html"><img class="logo" src="../Img/Icons/Logo.png" alt="Logo do site"></a>
+            </div>
+            <nav>
+                <div class="menuHamburgue" onclick="mobileMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="Presets.html">Presets</a></li>
+                        <li><a href="../index.html#p4">Loja</a></li>
+                        <li><a href="../index.html#p5">Contato</a></li>
+                        <li><a href="/Pages/login.html"><img class="logoicon" src="../Img/Icons/Icon_user.png" alt="Icone_user"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="mobile-links" style="display: none;">
+            <ul>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="Presets.html">Presets</a></li>
+                        <li><a href="../index.html#p4">Loja</a></li>
+                        <li><a href="../index.html#p5">Contato</a></li>
+                <li><a href="/Pages/login.html">Minha Conta</a></li>
+            </ul>
+        </div>
+        <main>
+            <div class="paralax">
+                <div class="conteinerL">
+                    <div class="esq">
+                        <div class="introducao">
+                            <h1>Registre-se</h1>
+                            <p>Já é um membro? <a href="/Pages/login.html">Login</a></p>
+                        </div>
+                        <form action="#" method="post" class="formulario">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome"></br>
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email"></br>
+
+                            <label for="senha">Senha</label>
+                            <div class="senhaConteiner">
+                                <input type="password" name="senha" id="senha">
+                                <span class="material-symbols-outlined" id="alternarSenha">visibility_off</span>
+                            </div>
+                            <p id="senhaStrength"></p></br>
+
+                            <label for="confSenha">Confirmar Senha</label>
+                            <div class="senhaConteiner">
+                                <input type="password" name="confSenha" id="confSenha">
+                                <span class="material-symbols-outlined" id="alternarSenhaConfi">visibility_off</span>
+                            </div >
+                            <p id="confSenhaStrength"></p></br>
+
+                            <input type="submit" value="Registre-se">
+                        </form>
+                    </div>
+                    <div class="dir">
+                        <img src="../Img/Login/DSC01293.jpg" alt="Imagem Logo">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+        <script src="../Scripts/scriptRegister.js"></script>
+        <script src="../Scripts/scriptMenu.js"></script>
+    </body>
+    </html>
+</body>
+
+</html>

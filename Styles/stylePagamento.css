@@ -1,0 +1,310 @@
+@font-face {
+    font-family: MyriadPro-Light;
+    src: url('../Font/MyriadPro-Light.otf');
+}
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+@font-face {
+    font-family: MyriadPro-BoldCond;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    -webkit-user-zoom: fixed;
+    -moz-user-zoom: fixed;
+    -ms-user-zoom: fixed;
+    -o-user-zoom: fixed;
+    user-zoom: fixed;
+  }
+/*----------------------------------------------------------*/
+
+.cotainerP{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.ladoInfoProduto {
+    background-color: #859AA6;
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.produto {
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.192);
+    width: 70%;
+    height: 80%;
+    padding: 2em 3em;
+    background-color: #ffffff;
+    margin: 0px;
+}
+.prod1 {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #4e4e4e;
+    text-align: center;
+    height: 20%;
+}
+.prod1 h1 {
+    font-size: 2.5em;
+    font-family: MyriadPro-BoldCond;
+    margin-bottom: 0.5em;
+}
+
+.prod1 p {
+    color: #5a5a5a;
+    font-family: MyriadPro-light;
+    line-height: 1;
+}
+
+.prod2 {
+    text-align: left;
+    border-bottom: 1px solid #4e4e4e;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.prod2 h2 {
+    font-size: 2em;
+    font-family: MyriadPro-BoldCond;
+    margin-bottom: 1.2em;
+}
+.prod2 h3 {
+    font-size: 1.5em;
+    padding-left: 1.2em;
+}
+.prod3 {
+    display: flex;
+    height: 20%;
+    align-items: center;
+}
+
+.prod3 p {
+    color: #393939;
+    margin-right: 10px;
+}
+
+.prod3 h2 {
+    font-size: 2.5em;
+}
+
+/*---------------------------------------------------*/
+
+
+.ladoPagamento { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 60%;
+    background-color: #ffffff;  
+}
+
+.ladoPagamento h1 {
+    font-size: 2.5em;
+    margin-bottom: 1.2em;
+
+}
+
+.modoPagamento {
+    display: flex;
+    width: 100%;
+    margin: 0em auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2em;
+}
+.box{
+    display: flex;
+    align-items: center;
+    margin: 0em 2em;
+}
+.modoPagamento > .box > label {
+    margin: 0em 1em 0em 1em;
+}
+
+.modoPagamento input[type="radio"] {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.modoPagamento input[type="radio"]:checked {
+    background-color: transparent;
+    border-color: #000000;
+}
+
+.modoPagamento input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 15px;
+    height: 15px;
+    background-color: #1b1b1b;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    text-align: left;
+}
+.formulario label{
+    width: 95%;
+}
+.formulario input[type="text"] {
+    width: 100%;
+    height: 2.5em;
+    border-radius: 5px;
+    border: 1px solid #C7C7C7;
+    margin-bottom: 15px;
+    padding: 1.1em;
+}
+
+.formulario label {
+    margin: 10px 0px 10px 2px;
+}
+
+.formulario .linha {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.formulario .linha .caixa {
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
+    width: 48%;
+}
+
+.formulario .linha .caixa > input[type="text"] {
+    width: 95%;
+}
+
+.formulario input[type="submit"] {
+    display: block;
+    margin: 2em auto;
+    width: 13em;
+    height: 4em;
+    border: none;
+    color: #ffffff;
+    background-color: #3791C3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:active {
+    background-color: #266b91;
+}
+
+.formulario>.qrCode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em auto;
+}
+
+.formulario>.qrCode>img {
+    width: 20em;
+}
+
+.error{
+    display: block;
+    color: #ff0000;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px){
+    body{
+        user-zoom: fixed;
+    }
+    .cotainerP{
+        flex-direction: column;
+    }
+    .ladoInfoProduto {
+        height: 50vh;
+        width: 100%;
+    }
+    .produto {
+        height: 90%;
+        width: 80%;
+        padding: 1em 3em;
+    }
+    .prod1 {
+        padding-bottom: 5em;
+    }
+    .prod1 h1 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+    .prod1 p {
+        font-weight: bold;
+    }
+    .prod2 {
+        height: 50%;   
+    }
+    .prod2 h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .prod2 h3 {
+        font-size: 1.3em;
+    }
+    .prod3 {
+        height: 25%;
+    }
+    .prod3 h2{
+        font-size: 1.5em;
+    }
+    .prod3 p {
+        font-size: 0.8em;
+    }
+
+
+    /*-----------------------------*/
+    .ladoPagamento { 
+        height: 100vh;
+        width: 100%;
+        background-color: #ffffff;  
+    }
+    .modoPagamento input[type="radio"] {
+        width: 25px;
+        height: 19px;
+    }   
+    .modoPagamento input[type="radio"]:checked::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        width: 12px;
+        height: 11px;
+        background-color: #1b1b1b;
+    }
+}

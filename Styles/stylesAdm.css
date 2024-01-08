@@ -1,0 +1,282 @@
+@font-face {
+    font-family: MyriadPro-Light;
+    src: url('../Font/MyriadPro-Light.otf');
+}
+
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+    font-family: MyriadPro-BoldCond;
+    src: url('../Font/MYRIADPRO-REGULAR.OTF');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+}
+
+.card {
+    width: 80%;
+    height: 80%;
+    background-color: #282828;
+    border: 1px solid #181818;
+
+}
+
+.conteudo {
+    margin-right: 10px;
+    max-height: 32.8em;
+    overflow-y: auto;
+}
+
+.conteudo::-webkit-scrollbar {
+    width: 11px;
+    background-color: transparent; 
+}
+
+.conteudo::-webkit-scrollbar-thumb {
+    background-color: #2E2E2E ;
+    border-radius: 20px ;
+    height: 5px ;
+}
+.headerConteiner {    
+    height: 13%;
+}
+
+.headerConteiner>ul {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    
+}
+
+.headerConteiner ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    border-bottom: 1px solid #181818;
+}
+.headerConteiner ul li:hover {
+    background-color: #181818;
+}
+.headerConteiner ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.cardForm {
+    width: 90%;
+    height: 15em;
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2E2E2E;
+
+}
+
+.cardAdd {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inputImage,.inputImageP {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputImageCont {
+    background-color: #353535;
+    width: 6.5em;
+    height: 10em;
+    border-radius: 1em;
+    box-shadow: 4px 4px 10px #0000005e;
+    position: relative;
+}
+
+.custom-file-input {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-file-input img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.custom-file-input input[type="file"]:not([value=""])+img#icone-preview {
+    object-fit: cover;
+    width: 5em;
+    height: 5em;
+}
+
+.inputImagemConf img {
+    width: 100%;
+    height: 100%;
+}
+
+.inputNome,
+.inputData{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.inputNomeP,
+.inputPreco,
+.inputDesconto,
+.inputSubP,
+.inputImageP{
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+}
+.inputSubP{
+    align-items: center;
+}
+.descontoLinha{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.inputNome label,
+.inputNomeP label,
+.inputData label,
+.inputPreco label,
+.inputDesconto label {
+    color: #ffffff;
+    margin-bottom: 1.6em;
+    font-size: 1.5em;
+}
+
+.inputNome input,
+.inputData input, 
+.inputNomeP input,
+.inputPreco input{
+    height: 1.5em;
+    padding: 1.5em;
+    background-color: #242424;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0px 4px 8px #00000044;
+}
+
+.inputDesconto input[type=text] {
+    width: 70%;
+    height: 1.5em;
+    padding: 1.5em;
+    background-color: #242424;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0px 4px 8px #00000044;
+}
+.inputDesconto input[type=checkbox]{
+    -webkit-appearance: none;
+    width: 25%;
+    cursor: pointer;
+    background-color: #741d1d;
+    background-size: cover;
+}
+input[type="checkbox"]:checked{
+    background-color: #24741d
+}
+.inputData input {
+    text-align: center;
+}
+
+.inputSub{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.inputSub input,.inputSubP input {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    background-color: #1d5474;
+    border: none;
+    color: #ffffff;
+    box-shadow: 0px 4px 8px #00000044;
+    font-size: 2em;
+}
+
+.conf{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.imgConf,.nomeConf,.dataConfi,.eventoConf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.nomeConf,.dataConfi{
+    flex-direction: column;
+}
+.imgConf img{
+    width: 6.5em;
+    height: 10em;
+    border-radius: 1em;
+    box-shadow: 4px 4px 10px #0000005e;
+}
+.nomeConf h1,.dataConfi h1{
+    color: #ffffff;
+}
+.nomeConf p, .dataConfi p{
+    color: #eeeeee;
+    font-size: 1.5em;
+}
+.eventoConf{
+    justify-content: space-evenly;
+}
+.eventoConf a span{
+    cursor: pointer;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
